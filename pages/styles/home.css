@@ -85,7 +85,7 @@ img {vertical-align: middle;}
   animation-duration: 1.5s;
 }
 
-.products {
+.products, .filters {
   /* height: 20rem;
   width: 50rem; */
   background-color: white;
@@ -148,10 +148,11 @@ img {vertical-align: middle;}
   object-fit: cover;
 }
 
-.child-card img:hover ~ .child-card span, .child-card img:hover {
-  opacity: 0.5;
+.child-card img:hover  .child-card span, .child-card img:hover {
+  /* opacity: 0.5; */
+  background-color: rgba(0, 0, 0, 0.5);;
   cursor: pointer;
-  /* height: 22rem; */
+  height: 22rem;
   display: flex;
   /* transform: translateY(-15%); */
 }

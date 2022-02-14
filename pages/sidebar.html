@@ -1,0 +1,47 @@
+<div class="filters">
+  <section>
+    <h2>Filters</h2>
+  </section>
+  <section class="price">
+    <h4>Price</h4>
+    <div class="check-label">
+      <input type="checkbox" value="500" id="500" name="500" />
+      <!-- <div class="check"></div>  -->
+      <label for="500"> 500 to 2000 </label>
+    </div>
+    <div>
+      <input type="checkbox" value="2000" /> 
+      <label for="500"> 2000 to 4000 </label>
+    </div>
+    <div>
+      <input type="checkbox" value="4000" /> 
+      <label for="500"> 4000 to 6000 </label>
+    </div>
+    <div>
+      <input type="checkbox" value="6000" /> 
+      <label for="500"> >= 6000 </label>
+    </div>
+  </section>
+  <section class="brand">
+    <h4>Brands</h4>
+    <span><i class="fa-solid fa-angle-down"></i></span>
+    <div class="show-brands display-none">
+      <div>
+        <input type="checkbox" value="2000" /> 
+        <label for="500"> 2000 to 4000 </label>
+      </div>
+      <div>
+        <input type="checkbox" value="4000" /> 
+        <label for="500"> 4000 to 6000 </label>
+      </div>
+    </div>
+  </section>
+</div>
+<script>
+  $('.brand span').on('click', function(){
+    if($('.show-brands').hasClass('display-none'))
+      $('.show-brands ').removeClass('display-none');
+    else
+    $('.show-brands ').addClass('display-none');
+  });
+</script>

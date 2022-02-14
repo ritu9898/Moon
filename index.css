@@ -1,7 +1,13 @@
 @import url('./pages/styles/header.css');
 @import url('./pages/styles/home.css');
+@import url('./pages/styles/sidebar.css');
 
 body {
     color: white;
     background-color: #f1f3f642;
+    font-family: 'Roboto', sans-serif;
+}
+
+.main-section {
+    display: flex;
 }
