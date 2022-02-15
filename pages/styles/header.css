@@ -59,7 +59,7 @@
   text-align: center;
 }
 
-.wishlist.badge {
+.wishlist .badge {
   top: 0;
   left: 1.5rem;
 }
