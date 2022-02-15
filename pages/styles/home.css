@@ -4,7 +4,7 @@ body {font-family: Verdana, sans-serif; margin:0}
 img {vertical-align: middle;}
 
 .slides {
-  margin: 2rem 0;
+  margin: 0.5rem;
 }
 
 /* Slideshow container */
@@ -96,7 +96,8 @@ img {vertical-align: middle;}
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  justify-content: center;
+  /* justify-content: center; */
+  align-items: stretch;
 }
 
 .card {
@@ -124,8 +125,8 @@ img {vertical-align: middle;}
   justify-content: center;
   align-items: center;
   position: relative;
-  height: 25rem;
-  width: 25rem;
+  height: 15rem;
+  width: 15rem;
 }
 
 .child-card span {
@@ -143,8 +144,8 @@ img {vertical-align: middle;}
 }
 
 .child-card img {
-  height: 25rem;
-  width: 25rem;
+  height: 15rem;
+  width: 15rem;
   object-fit: cover;
 }
 
@@ -152,7 +153,7 @@ img {vertical-align: middle;}
   /* opacity: 0.5; */
   background-color: rgba(0, 0, 0, 0.5);;
   cursor: pointer;
-  height: 22rem;
+  height: 12rem;
   display: flex;
   /* transform: translateY(-15%); */
 }
