@@ -4,11 +4,40 @@
 @import url('./pages/styles/listing.css');
 
 body {
-    color: white;
-    background-color: #f1f3f642;
-    font-family: 'Roboto', sans-serif;
+  color: white;
+  background-color: #f1f3f642;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
 }
 
 .main-section {
-    display: flex;
+  display: flex;
+}
+
+.alert {
+  height: auto;
+  width: 30rem;
+  z-index: 1;
+  background-color: darkseagreen;
+  margin: 1rem;
+  border-radius: 3px;
+  text-align: center;
+  padding: 0.5rem;
+  position: relative;
+}
+
+.alert span {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+.alert span:hover {
+  cursor: pointer;
+}
+
+.alert-box {
+  position: absolute;
+  top: 0rem;
+  display: none;
 }
