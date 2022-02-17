@@ -16,6 +16,10 @@
   gap: 1rem;
 }
 
+.child-card div section p {
+  display: inline-flex;
+}
+
 .child-card div section .strike {
   text-decoration: line-through;
   color: grey;

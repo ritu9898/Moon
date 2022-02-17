@@ -1,3 +1,10 @@
+<div class="alert-box">
+  <div class="alert">
+    <p>Wishlist added successfully!</p>
+    <span>X</span>
+  </div>
+</div>
+
 <div class="products" id="product-listing">
   <div class="child-card">
     <img src="../assets/images/products/pro_1.jpg" />
@@ -30,10 +37,12 @@
     }
   });
 
-  $(function() {
-    $(".heart").on("click", function() {
-      $(this).toggleClass("is-active");
-    });
+  $(".heart").on("click", function() {
+    $(this).toggleClass("is-active");
+    let msg = $(this).hasClass('is-active') ? 'Added to Wishlist' : 'Removed from Wishlist';
+    $('.alert-box .alert p').html(msg);
+    $('.alert-box')[0].style.display = 'block';
   });
 
  </script>
+ <script src="../index.js"></script>
