@@ -7,6 +7,12 @@ img {vertical-align: middle;}
   margin: 0.5rem;
 }
 
+.slides .mySlides img {
+  height: 20rem;
+  width: auto;
+  object-fit: cover;
+}
+
 /* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
