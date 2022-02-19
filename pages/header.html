@@ -30,25 +30,28 @@
   </div>
 </div>
 <script>
-  $('#search').on('keyup', function(){
-    let value = $(this).val();
-    let sba = $('#search-bar-append');
-    sba.html('');
+  $(document).ready(function(){
+    $('#search').on('keyup', function(){
+      let value = $(this).val();
+      let sba = $('#search-bar-append');
+      sba.html('');
 
-    if(value.length == 0)
-    {
-      sba[0].style.display = 'none';
-    }
-    else
-    {
-      let b = ['blush', 'brush', 'brows'];
-      b.map(function(k){
-        if(k.includes(value))
-        {
-         sba.append('<p><a href="">'+ k + '</a></p><br />');
-        }
-      })
-      sba[0].style.display = 'block';
-    }
-  });
+      if(value.length == 0)
+      {
+        sba[0].style.display = 'none';
+      }
+      else
+      {
+        let b = ['blush', 'brush', 'brows'];
+        b.map(function(k){
+          if(k.includes(value))
+          {
+          sba.append('<p><a href="../pages/listing.html">'+ k + '</a></p><br />');
+          }
+        })
+        sba[0].style.display = 'block';
+      }
+    });
+  })
+
 </script>
