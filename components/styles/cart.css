@@ -12,6 +12,7 @@
   width: auto;
   margin: 1rem;
   padding: 1rem;
+  flex-shrink: 1;
 }
 
 #cart-details .product-cart {
@@ -113,7 +114,7 @@
   color: black;
   margin: 0.5rem;
   display: block;
-  width: auto;
+  width: 20rem;
   margin: 1rem;
   padding: 1rem;
   position: sticky;
@@ -125,4 +126,18 @@
 .bill {
   display: flex;
   flex-direction: column;
+}
+
+.bill p span {
+  float: right;
+}
+
+.free-delivery {
+  color: forestgreen;
+}
+
+.total-price {
+  padding: 1rem 0;
+  border-bottom: 1px dotted;
+  border-top: 1px dotted;
 }
