@@ -2,6 +2,7 @@
 @import url('./pages/styles/home.css');
 @import url('./pages/styles/sidebar.css');
 @import url('./components/styles/cart.css');
+@import url('./components/styles/wishlist.css');
 
 body {
     color: white;
