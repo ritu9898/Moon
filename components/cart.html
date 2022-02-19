@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Dongle&family=Inter:wght@300&family=Roboto&family=Spectral:wght@300&display=swap" rel="stylesheet">
+  <link href="../index.css" rel="stylesheet" />
+  </head>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script>
+    $(function(){
+      $('#header').load('../pages/header.html'); 
+    });
+  </script>
+<body>
+  <header id="header"></header>
+  <div class="main-section-cart">
+    <aside id="cart-details">
+      <div class="product-cart">
+        <h3>My Cart (<span id="total"></span>)</h3>
+      </div>
+      <div class="product-cart">
+        <div>
+          <img src="../assets/images/products/pro_4.jpg" />
+          <div class="add-more">
+            <div class="minus">  <i class="fa fa-minus" aria-hidden="true"></i>  </div>
+            <div class="number">  1 </div>
+            <div class="plus">  <i class="fa fa-plus" aria-hidden="true"></i>  </div>
+          </div>
+        </div>
+        <div class="desc">
+         <p>Beauty product by Moon</p>
+         <p>Cream</p>
+         <div class="save-later">
+          <h5>SAVE FOR LATER</h5>
+          <h5 class="remove">REMOVE</h5>
+         </div>
+        </div>
+        <div class="delivery">
+          <p>Delivery by Wed Feb 23</p>   
+        </div>
+      </div>
+      <div class="product-cart">
+        <div>
+          <img src="../assets/images/products/pro_7.jpg" />
+          <div class="add-more">
+            <div class="minus">  <i class="fa fa-minus" aria-hidden="true"></i>  </div>
+            <div class="number">  1 </div>
+            <div class="plus">  <i class="fa fa-plus" aria-hidden="true"></i>  </div>
+          </div>
+        </div>
+        <div class="desc">
+         <p>Beauty product by Moon</p>
+         <p>Cream</p>
+         <div class="save-later">
+          <h5>SAVE FOR LATER</h5>
+          <h5 class="remove">REMOVE</h5>
+         </div>
+        </div>
+        <div class="delivery">
+          <p>Delivery by Wed Feb 23</p>   
+        </div>
+      </div>
+      <div class="product-cart">
+        <div>
+          <img src="../assets/images/products/pro_6.jpg" />
+          <div class="add-more">
+            <div class="minus">  <i class="fa fa-minus" aria-hidden="true"></i>  </div>
+            <div class="number">  1 </div>
+            <div class="plus">  <i class="fa fa-plus" aria-hidden="true"></i>  </div>
+          </div>
+        </div>
+        <div class="desc">
+         <p>Beauty product by Moon</p>
+         <p>Cream</p>
+         <div class="save-later">
+          <h5>SAVE FOR LATER</h5>
+          <h5 class="remove">REMOVE</h5>
+         </div>
+        </div>
+        <div class="delivery">
+          <p>Delivery by Wed Feb 23</p>   
+        </div>
+      </div>
+      <div class="product-cart">
+        <div>
+          <img src="../assets/images/products/pro_2.jpg" />
+          <div class="add-more">
+            <div class="minus">  <i class="fa fa-minus" aria-hidden="true"></i>  </div>
+            <div class="number">  1 </div>
+            <div class="plus">  <i class="fa fa-plus" aria-hidden="true"></i>  </div>
+          </div>
+        </div>
+        <div class="desc">
+         <p>Beauty product by Moon</p>
+         <p>Cream</p>
+         <div class="save-later">
+          <h5>SAVE FOR LATER</h5>
+          <h5 class="remove">REMOVE</h5>
+         </div>
+        </div>
+        <div class="delivery">
+          <p>Delivery by Wed Feb 23</p>   
+        </div>
+      </div>
+
+      <div class="place-order">
+        <button>Place Order</button>
+      </div>
+    </aside>
+    <div id="bill-details">
+      <div>
+        <p>Price Details</p>
+      </div>
+      <div class="bill">
+        <p>Price <span>$20,000</span></p>
+        <p>Discount <span>$1000</span></p>
+        <p>Delivery Charges <span class="free-delivery">FREE</span></p>
+        <p class="total-price">Price <span>$19,000</span></p>
+
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  $(function(){
+
+    let total = $("#total");
+    total.text($('.product-cart').length - 1);
+
+    $('.minus, .plus').on('click', function(){
+      let numberField =  $(this).siblings(".number");
+      let number = parseInt(numberField[0].textContent);
+
+      if($(this).hasClass('plus')) {
+        let minusField = $(this).siblings(".minus");
+        if(number == 1)
+        {
+          minusField.addClass('minus-disable');
+        }
+        else
+        {
+          minusField.removeClass('minus-disable');
+        }
+        number++;
+      }
+      else {
+        if(number == 1)
+        {
+          $(this).addClass('minus-disable');
+        }
+        else
+        {
+          $(this).removeClass('minus-disable');
+          number--;
+        }
+      }
+      numberField.text(number);
+    });
+
+    $('.save-later .remove').on('click', function(){
+      $(this).parents('.product-cart').remove();
+      total.text($('.product-cart').length - 1);
+    });
+  });
+</script>
+</html>
