@@ -28,6 +28,9 @@
 
 .wishlist-body .product-card {
   display: flex;
+  width: 50rem;
+  border-bottom: 1px solid #e0e0e0;
+  margin: 2rem 0;
 }
 
 .wishlist-body .product-card img {
@@ -38,4 +41,16 @@
 .wishlist-body .product-card .desc {
   padding: 1rem;
   margin: 1rem;
+  flex-grow: 1;
+}
+
+.strike {
+  text-decoration: line-through;
+  color: grey;
+}
+
+.wishlist-body .product-card .desc .price {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
