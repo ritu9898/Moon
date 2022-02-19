@@ -51,8 +51,8 @@
 }
 
 .heart {
-  width: 100px;
-  height: 100px;
+  width: 5rem;
+  height: 7rem;
   background: url("https://cssanimation.rocks/images/posts/steps/heart.png") no-repeat;
   background-position: 0 0;
   cursor: pointer;
