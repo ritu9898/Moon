@@ -70,6 +70,10 @@
   font-size: 2rem;
 }
 
+.wishlist a, .cart a {
+  color: white;
+}
+
 .badge {
   position: absolute;
   padding: 0rem;
