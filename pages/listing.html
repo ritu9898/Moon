@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title> <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Dongle&family=Inter:wght@300&family=Roboto&family=Spectral:wght@300&display=swap" rel="stylesheet">
+  <link href="../index.css" rel="stylesheet" />
+</head>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script>
+  $(function(){
+    $('#header').load('./header.html'); 
+    $('#home').load('./home.html'); 
+    $('#side-bar').load('./sidebar.html'); 
+  });
+</script>
+<body>
+  <header id="header"></header>
+  <div class="main-section">
+    <aside id="side-bar"></aside>
+    <div id="">
+      <div class="alert-box">
+        <div class="alert">
+          <p>Wishlist added successfully!</p>
+          <span>X</span>
+        </div>
+      </div>
+      <div class="products" id="product-listing">
+        <div class="child-card">
+          <img src="../assets/images/products/pro_1.jpg" />
+          <div class="card-data">
+            <div>
+              <p class="brand-name">Nykaa</p>
+              <p>Face Cream</p>
+              <small>Available</small>
+              <section>
+                <p><i class="fa fa-dollar"></i>500</p>
+                <p class="strike"><i class="fa fa-dollar"></i>1200</p>
+              </section>
+            </div>
+            <div class="">
+              <div class="heart">
+      
+              </div>
+              <div class="add-to-cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>
+
+
+<script>
+  $(document).ready(function(){
+    let pl = $('#product-listing');
+    for(let i=1;i<8;i++) {
+      pl.append('<div class="child-card"><img src="../assets/images/products/pro_'+ i +'.jpg" /><div class="card-data"><div><p class="brand-name">Nykaa</p><p>Face Cream</p><small>Available</small><section><p><i class="fa fa-dollar"></i>500</p><p class="strike"><i class="fa fa-dollar"></i>1200</p></section></div><div class=""><div class="heart"></div><div class="add-to-cart"><i class="fa-solid fa-cart-shopping"></i></div></div></div></div>');
+    }
+
+    $(".heart").on("click", function() {
+      $(this).toggleClass("is-active");
+      let msg = $(this).hasClass('is-active') ? 'Added to Wishlist' : 'Removed from Wishlist';
+      $('.alert-box .alert p').html(msg);
+      $('.alert-box')[0].style.display = 'block';
+      setTimeout(() => {
+        $('.alert-box')[0].style.display = 'none';
+      }, 2000);
+    });
+
+    $(".add-to-cart").on("click", function() {
+      $(this).toggleClass("add-to-cart-color");
+    });
+  });
+
+ 
+
+ </script>
+ <script src="../index.js"></script>
