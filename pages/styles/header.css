@@ -1,12 +1,12 @@
-.row {
+.row, .logo-row {
   background-image: linear-gradient(150deg, #0652c5, #d4418e);
   background-image: linear-gradient(-90deg, #A3278F 0%, #E52F50 100%);
   display: flex;
   gap: 2rem;
   align-items: center;
-  padding: 1rem;
-  justify-content: end;
-  flex-wrap: wrap;
+  padding: 0 1rem;
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
 }
 
 .search-bar {
@@ -97,11 +97,59 @@
 }
 
 .logo {
-  height: 10rem;
-  width: 10rem;
+  height: 8rem;
+  width: 8rem;
   border-radius: 50%;
+  cursor: pointer;
 }
 
-.row .col button a {
+.row .col button a, .logo-row .col button a {
   text-decoration: none;
+}
+
+
+@media only screen and (max-width: 860px) {
+  .row {
+    /* flex-direction: row; */
+    padding: 1rem;
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width: 625px) { 
+  .logo {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  #header {
+    min-width: max-content;
+  }
+}
+
+@media only screen and (max-width: 350px) {  
+  .main-section {
+    flex-direction: column;
+  }
+
+  .header .row{
+    flex-direction: unset;
+    padding: 1rem;
+    flex-wrap: wrap;
+    width: fit-content;
+  }
+
+  #header {
+    min-width: auto;
+  }
+
+  .child-card {
+    height: 5rem !important;
+    width: 5rem !important;
+  }
+
+  .child-card img {
+    height: 5rem !important;
+    width: 5rem !important;
+  }
 }
