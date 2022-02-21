@@ -1,6 +1,6 @@
 .filters {
   box-shadow: 0 1px 8px 0 rgb(0 0 0 / 6%);
-  color: black;
+  color: var(--black);
   margin: 0.5rem;
   display: block;
   width: 20rem;
@@ -16,7 +16,7 @@
 }
 
 section {
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid var(--section);
 }
 
 .price input, .brand input, .rating input, .discount input, .occasion input, .skin-type input {
@@ -30,7 +30,7 @@ section {
   width: 14px;
   height: 14px;
   background-color: transparent;
-  border: 1.4px solid #c2c2c2;
+  border: 1.4px solid var(--check);
   border-radius: 1.5px;
   box-sizing: border-box;
   display: inline-block;
@@ -56,8 +56,3 @@ section {
 .display-none {
   display: none;
 }
-
-/* .brand span:active {
-  transform: rotate(180deg);
-  transition-duration: 0s;
-} */

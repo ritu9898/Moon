@@ -1,12 +1,12 @@
 .main-section-cart {
   display: flex;
-  color: black;
+  color: var(--black);
   position: relative;
 }
 
 #cart-details {
   box-shadow: 0 1px 8px 0 rgb(0 0 0 / 6%);
-  color: black;
+  color: var(--black);
   margin: 0.5rem;
   display: block;
   width: auto;
@@ -18,7 +18,7 @@
 #cart-details .product-cart {
   display: flex;
   width: 50rem;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid var(--card-border);
   margin: 1rem 0;
   gap: 1rem;
   padding-bottom: 1rem;
@@ -29,7 +29,7 @@
 }
 
 #cart-details .product-cart .desc p:nth-child(2) {
-  color: grey;
+  color: var(--grey);
 }
 
 #cart-details .product-cart img {
@@ -48,7 +48,7 @@
   width: 2rem;
   border-radius: 50%;
   text-align: center;
-  border: 1px solid grey;
+  border: 1px solid var(--grey);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,15 +62,15 @@
 .product-cart .add-more .number {
   height: 2rem;
   width: 3rem;
-  border: 1px solid grey;
+  border: 1px solid var(--grey);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .minus-disable {
-  color: #c2c2c2;
-  border-color: #e0e0e0;
+  color: var(--disable-color);
+  border-color: var(--disable-bg);
   cursor: auto !important;
 }
 
@@ -88,7 +88,7 @@
   display: flex;
   justify-content: flex-end;
   width: 50rem;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid var(--disable-bg);
   margin: 1rem 0;
   gap: 1rem;
   padding-bottom: 1rem;
@@ -102,8 +102,8 @@
 
 .place-order button {
   padding: 1rem 5rem;
-  background-image: linear-gradient(-90deg, #A3278F 0%, #E52F50 100%);
-  color: white;
+  background-image: var(--main);
+  color: var(--white);
   cursor: pointer;
   border: 0;
   font-size: 20px;
@@ -111,7 +111,7 @@
 
 #bill-details {
   box-shadow: 0 1px 8px 0 rgb(0 0 0 / 6%);
-  color: black;
+  color: var(--black);
   margin: 0.5rem;
   display: block;
   width: 20rem;
@@ -133,7 +133,7 @@
 }
 
 .free-delivery {
-  color: forestgreen;
+  color: var(--forestgreen);
 }
 
 .total-price {

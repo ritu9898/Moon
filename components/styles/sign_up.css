@@ -7,7 +7,7 @@
   overflow: auto;
   display: flex;
   padding: 10rem;
-  background-color: yellow;
+  background-color: var(--yellow);
   font-family: Roboto,Arial,sans-serif;
 }
 
@@ -22,7 +22,7 @@
 }
 
 .sign-up-form label {
-  color:rgb(158, 154, 154);
+  color:var(--sign-up-label);
   padding:10px 20px;
   position: absolute;;
   top: 6px;
@@ -34,7 +34,7 @@
 }
 
 .sign-up-form input {
-  color:black;
+  color:var(--black);
   border:none;
   border-bottom:1px solid rgb(228, 228, 228);
   outline:none;
@@ -48,7 +48,6 @@
 .sign-up-form .form-input input {
   position: relative;
   left:20px;
-  /* top:50px; */
   padding:10px 20px;
 } 
 
@@ -79,7 +78,7 @@
   bottom: 1px;
   position: absolute;
   will-change: transform;
-  background: #2874f0;
+  background: var(--ruler);
   transition: transform .2s ease;
 }
 
@@ -89,6 +88,6 @@
 }
 
 .sign-up-form .form-input input:focus ~ input{
-  border-bottom:1px solid #2874f0;
+  border-bottom:1px solid var(--ruler);
   height: 40px; 
 }
